@@ -34,19 +34,24 @@
     content: "\e902";
     font-size: 2em;
   }
+
   .icon-mail-envelope-closed:before {
     content: "\e900";
     font-size: 2em;
   }
+
   .icon-figma:before {
     content: "\e901";
   }
+
   .icon-twitter:before {
     content: "\ea96";
   }
+
   .icon-youtube:before {
     content: "\ea9d";
   }
+
   .icon-twitch:before {
     content: "\ea9f";
   }
@@ -176,7 +181,7 @@ header ul li a:hover{
     background: linear-gradient(145deg, #D24074 0%, #6518B4 100%);
 }
 
-.linkedin, .github, .icon{
+.icon{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -189,13 +194,15 @@ header ul li a:hover{
     background-color: #121212;
 }
 
-.linkedin img, .github img, .icon span{
+/* .icon span{
     width: 30px;
     height: 30px;
-}
+} */
 
-.linkedin p, .github p, .icon p{
-    margin-left: 15px;
+.icon p{
+   /*  margin-left: 15px; */
+    font-weight: 300;
+    font-size: 1.5em;
 }
 
 .imagem_into{
@@ -247,6 +254,7 @@ header ul li a:hover{
     justify-content: space-between;
     margin-top: 25px;
 }
+
 
 
 @media (max-width:600px){
