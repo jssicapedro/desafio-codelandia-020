@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?vqejv4');
+  src:  url('fonts/icomoon.eot?vqejv4#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?vqejv4') format('truetype'),
+    url('fonts/icomoon.woff?vqejv4') format('woff'),
+    url('fonts/icomoon.svg?vqejv4#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: inline-block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  color: #00D2DF;
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  font-size: 2em;
+  text-transform: none;
+  /* line-height: 1; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-inbox-download:before {
+  content: "\e902";
+}
+.icon-mail-envelope-closed:before {
+  content: "\e900";
+}
+.icon-linkedin:before {
+  content: "\e903";
+}
+.icon-figma:before {
+  content: "\e901";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-youtube:before {
+  content: "\ea9d";
+}
+.icon-twitch:before {
+  content: "\ea9f";
+}
+.icon-github:before {
+  content: "\eab0";
+}
