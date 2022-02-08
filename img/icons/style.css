@@ -17,7 +17,7 @@
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
-  font-size: 2em;
+  font-size: 1.5em;
   text-transform: none;
   /* line-height: 1; */
   -webkit-font-smoothing: antialiased;
@@ -26,12 +26,15 @@
 
 .icon-inbox-download:before {
   content: "\e902";
+  font-size: 1.5em;
 }
 .icon-mail-envelope-closed:before {
-  content: "\e900";
+  content: "\e900"; 
+  font-size: 1.5em;
 }
 .icon-linkedin:before {
   content: "\e903";
+  font-size: 1.5em;
 }
 .icon-figma:before {
   content: "\e901";
@@ -47,4 +50,5 @@
 }
 .icon-github:before {
   content: "\eab0";
+  font-size: 1.5em;
 }
