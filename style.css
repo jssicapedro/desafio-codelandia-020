@@ -190,10 +190,12 @@ header ul li a:hover{
     flex-direction: row;
 }
 
-.foto{
+.foto{ 
+    align-items: center;
     width: 50%;
     display: flex;
     margin: auto;
+    height: 67vh;
 }
 
 .foto img{
@@ -261,7 +263,7 @@ header ul li a:hover{
     border-left: 1px solid #10d7e2;
     background-color: var(--mode_secundario);
     color: var(--mode_text);
-    padding: 20px;
+    padding: 10px 80px 10px 20px;
 }
 
 .menu_experiencia a:active{
