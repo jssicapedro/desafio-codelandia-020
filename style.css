@@ -1,13 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+:root{
+    --mode_principal: #121212;
+    --mode_secundario: #151515;
+    --mode_text: #fff;
+} 
+
+.light-mode{
+    --mode_principal: #FFF;
+    --mode_secundario: #C4C4C4;
+    --mode_text: #000 ;
+}
+
+
+
+
+
 *{
     margin: 0;
     padding: 0;
 }
 
 body{
-    background-color: #121212;
-    color: #fff;
+    background-color: var(--mode_principal);
+    color: var(--mode_text);
     font-family: 'Inter', sans-serif;
 }
 /* 
@@ -22,33 +38,40 @@ body{
 }
 
 header{
+    height: 50px;
     width: 100%;
+    line-height: 50px;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     padding: 20px 0;
-    background-color: #151515;
+    background-color: var(--mode_secundario);
 }
 
 header p{
-    width: 70%;
-    color: #00D2DF;
     font-size: 1.1em;
-    margin-left: 7.5%;
-    font-weight: normal;
+    font-weight: bold;
 }
 
 header ul{
-    justify-content: space-around;
     font-weight: 200;
     display: flex;
     list-style: none;
-    width: 30%;
     margin-right: 5%;
+}
+
+header ul li{
+    margin: 0 25px;
+}
+
+header img{
+    width: 45px;
+    cursor: pointer;
 }
 
 a{
     text-decoration: none;
-    color: #fff;
+    color: var(--mode_text);
 }
 
 header ul li:hover{
@@ -132,7 +155,7 @@ header ul li a:hover{
     width: 150px;
     line-height: 35px;
     border-radius: 5px;
-    background-color: #121212;
+    background-color: var(--mode_principal);
 }
 
 .icon img{
@@ -161,7 +184,7 @@ header ul li a:hover{
 /* Sobre */
 .sobre{
     height: 70vh;
-    background-color: #151515;
+    background-color: var(--mode_secundario);
     padding: 0 7.5%;
     display: flex;
     flex-direction: row;
@@ -171,12 +194,10 @@ header ul li a:hover{
     width: 50%;
     display: flex;
     margin: auto;
-   
 }
 
 .foto img{
-    width: 70%;
-    background-color: #121212;
+    background-color: var(--mode_principal);
     border-left: 5px solid #00D2DF;
 }
 
@@ -211,7 +232,7 @@ header ul li a:hover{
 .experiencia{
     height: 70vh;
     padding: 0 7.5%;
-    background-color: #121212;
+    background-color: var(--mode_principal);
     display: flex;
     flex-direction: row;
     padding-top: 50px;
@@ -224,7 +245,7 @@ header ul li a:hover{
 .menu_experiencia ul{
     margin-top: 60px;
     list-style: none;
-    border-left: 2px solid #151515;
+    border-left: 2px solid var(--mode_secundario);
 }
 
 .menu_experiencia ul li{
@@ -238,15 +259,15 @@ header ul li a:hover{
 
 .menu_experiencia a:hover{
     border-left: 1px solid #10d7e2;
-    background-color: #151515;
-    color: #fff;
+    background-color: var(--mode_secundario);
+    color: var(--mode_text);
     padding: 20px;
 }
 
 .menu_experiencia a:active{
     border-left: 1px solid #10d7e2;
-    background-color: #151515;
-    color: #fff;
+    background-color: var(--mode_secundario);
+    color: var(--mode_text);
 }
 
 .conteudo_experiencia{
@@ -257,7 +278,7 @@ header ul li a:hover{
 .descricao{
     width: 80%;
     padding-bottom: 50px;
-    border-bottom: 2px solid #151515;
+    border-bottom: 2px solid var(--mode_secundario);
 }
 
 .cargo_data{
@@ -273,14 +294,105 @@ header ul li a:hover{
     flex-direction: column;
 }
 
+@media (max-width:1500px){
+    .landing_page{
+        width: 100%;
+        height: 70vh;
+        flex-direction: column;
+    }
 
+    .introducao{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        text-align: center;
+        background: linear-gradient(90deg, #d138eb68 0%, #00d4ff68 100%);
+        padding: 4%;
+        z-index: 1;
+    }
 
+    .texto{
+        padding: 0;
+    }
 
+    .botoes{
+        justify-content: center;
+        margin: auto;
+    }
 
+    .btn1, .btn2{
+        margin-top: 5%;
+    }
 
-@media (max-width:600px){
+    .imagem_into{
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        /* align-items: center; */
+        position: absolute;
+    }
 
-    /* fazer header */
+    .imagem_into img{
+        width: 80%;
+    }
+
+}
+
+@media (max-width: 1050px){
+    .landing_page{
+        height: 50vh;
+    }
+
+    .introducao{
+        background: none;
+    }
+
+    .imagem_into img{
+        display: none;
+    }
+    
+    h1{
+        font-size: 2em;
+    }
+
+    h2{
+        font-size: 1.5em;
+    }
+    
+    p{
+        font-size: 1.2em;
+    }
+
+    .sobre{
+        padding: 5%;
+        margin: auto;
+        height: 90vh;
+        width: 90%;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .foto, .sobre_mim{
+        width: 100%;
+    }
+
+    .foto{
+        justify-content: center;
+    }
+    
+    .redes, .download_mail{
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .sobre_mim p, .conteudo_experiencia p{
+        font-size: 1em;
+    }
+
+}
+
+/* @media (max-width:600px){
 
     main{
         width: 100%;
@@ -314,4 +426,4 @@ header ul li a:hover{
         width: 50%;
     }
 
-}
+} */
