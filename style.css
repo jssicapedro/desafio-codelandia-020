@@ -180,7 +180,6 @@ h2{
 
 /* SOBRE */
 .sobre{
-    height: 70vh;
     background-color: var(--mode_secundario);
     padding: 0 7.5%;
     display: flex;
@@ -229,12 +228,10 @@ h2{
 
 /* EXPERIÊNCIA */
 .experiencia{
-    height: 70vh;
-    padding: 0 7.5%;
+    padding: 7.5%;
     background-color: var(--mode_principal);
     display: flex;
     flex-direction: row;
-    padding-top: 50px;
 }
 
 .menu_experiencia{
@@ -305,14 +302,73 @@ h2{
 
 /* PROJETOS */
 .projetos{
-    height: 65vh;
     background-color: #151515;
-}
-
-.conteudo_projeto{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     padding: 7.5%;
 }
 
+.conteudo_projeto{
+    width: 50%;
+    height: 700px;
+}
+
+.conteudo_projeto:hover{
+    transform: translateY(-20px);
+    transition: 0.5s;
+}
+
+.foto_apresentacao_projeto{
+    margin: 5% 0;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    background-image: url("img/projetos/130633362-dcddc894-fbbc-455b-8c78-bbefc8e7822c.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-left: 10px solid #00D2DF;
+}
+
+.apresentacao-projeto{
+    height: 40%;
+}
+
+.apresentacao-projeto p{
+    margin: 2% 0;
+}
+
+.tecnologias_usadas{
+    color:#00D2DF;
+    font-weight: 500;
+}
+
+.repositorio{
+    width: 25%;
+    height: 60px;
+    border-radius: 4px;
+    border: double 2px transparent;
+    background-image: linear-gradient(#121212, #121212), linear-gradient(90deg, rgba(210,64,116,1) 0%, rgba(101,24,180,1) 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+
+    margin-top: 20px;
+}
+
+.repositorio p{
+    color: #fff;
+    font-size: 18px;
+}
+
+.repositorio p::before{
+    margin-right: 10%;
+    content: "🔗";
+}
+
+.repositorio:hover{
+    transform: translateY(-20px);
+    transition: 0.5s;
+}
 
 
 
@@ -359,6 +415,18 @@ h2{
 
     .imagem_into img{
         width: 80%;
+    }
+
+    .projetos{
+        flex-direction: column;
+    }
+
+    .conteudo_projeto{
+        width: 100%;
+    }
+
+    .foto_apresentacao_projeto{
+        width: 100%;
     }
 
 }
@@ -414,6 +482,12 @@ h2{
         font-size: 1em;
     }
 
+}
+
+@media (max-width:900px){
+    .foto_apresentacao_projeto{
+        height: 50%;
+    }
 }
 
 /* @media (max-width:600px){
