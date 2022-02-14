@@ -12,13 +12,10 @@
     --mode_text: #000 ;
 }
 
-
-
-
-
 *{
     margin: 0;
     padding: 0;
+    /* border: 1px solid red; */
 }
 
 body{
@@ -32,10 +29,6 @@ body{
     display: flex;
     margin: auto;
 } */
-
-.border{
-    border: 1px solid red;
-}
 
 header{
     height: 50px;
@@ -83,8 +76,12 @@ header ul li a:hover{
     border-bottom: 2px solid #00D2DF;
 }
 
+h2{
+    text-transform: uppercase;
+}
+
 /* MAIN */
-/* loading page */
+/* LOADING PAGE */
 .landing_page{
     display: flex;
     flex-direction: row;
@@ -181,7 +178,7 @@ header ul li a:hover{
     width: 100%;
 }
 
-/* Sobre */
+/* SOBRE */
 .sobre{
     height: 70vh;
     background-color: var(--mode_secundario);
@@ -230,7 +227,7 @@ header ul li a:hover{
     cursor: pointer;
 }
 
-/* experiencia */
+/* EXPERIÊNCIA */
 .experiencia{
     height: 70vh;
     padding: 0 7.5%;
@@ -278,6 +275,7 @@ header ul li a:hover{
 }
 
 .descricao{
+    margin: auto;
     width: 80%;
     padding-bottom: 50px;
     border-bottom: 2px solid var(--mode_secundario);
@@ -295,6 +293,30 @@ header ul li a:hover{
     display: flex;
     flex-direction: column;
 }
+
+#amazon{
+    display: block;
+}
+
+#google, #agency{
+    display: none;
+}
+
+
+/* PROJETOS */
+.projetos{
+    height: 65vh;
+    background-color: #151515;
+}
+
+.conteudo_projeto{
+    padding: 7.5%;
+}
+
+
+
+
+
 
 @media (max-width:1500px){
     .landing_page{
@@ -369,7 +391,7 @@ header ul li a:hover{
     .sobre{
         padding: 5%;
         margin: auto;
-        height: 90vh;
+        height: 95vh;
         width: 90%;
         flex-direction: column;
         gap: 50px;
