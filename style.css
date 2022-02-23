@@ -12,23 +12,27 @@
     --mode_text: #000 ;
 }
 
+.icon-github, .icon-inbox-download, .icon-mail-envelope-closed, .icon-linkedin, .icon-figma, .icon-twitter, .icon-youtube, .icon-twitch{
+    color: var(--mode_text);
+}
+
 *{
     margin: 0;
     padding: 0;
     /* border: 1px solid red; */
 }
 
+.linha{
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(209,56,235,0) 0%, var(--mode_text) 50%, rgba(0,212,255,0) 100%);
+} 
+
 body{
     background-color: var(--mode_principal);
     color: var(--mode_text);
     font-family: 'Inter', sans-serif;
 }
-/* 
-.margem_de_seguranca{
-    max-width: 85%;
-    display: flex;
-    margin: auto;
-} */
 
 header{
     height: 50px;
@@ -86,7 +90,6 @@ h2{
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 70vh;
 }
 
 .introducao{
@@ -114,7 +117,12 @@ h2{
     color: #00D2DF;
 }
 
-.botoes, .download_mail{
+.botoes{
+    width: 100%;
+    display: flex;
+}
+
+.download_mail{
     display: flex;
     flex-direction: row;
 }
@@ -155,19 +163,21 @@ h2{
     background-color: var(--mode_principal);
 }
 
+.icon:hover{
+    background: none;
+}
+
 .icon img{
     margin-right: 5px;
 }
 
 .icon span{
     width: 30px;
-    height: 30px;
 }
 
 .icon p{
-   /*  margin-left: 15px; */
-    font-weight: 300;
-    font-size: 1.5em;
+    font-weight: 600;
+    font-size: 1.5em!important;
 }
 
 .imagem_into{
@@ -181,7 +191,7 @@ h2{
 /* SOBRE */
 .sobre{
     background-color: var(--mode_secundario);
-    padding: 0 7.5%;
+    padding: 2% 7.5%;
     display: flex;
     flex-direction: row;
 }
@@ -228,89 +238,73 @@ h2{
 
 /* EXPERIÊNCIA */
 .experiencia{
-    padding: 7.5%;
-    background-color: var(--mode_principal);
-    display: flex;
-    flex-direction: row;
+    padding: 4% 7.5%;
+    background-color: var(--mode_principal); 
 }
 
-.menu_experiencia{
+.experiencia h2{
+    margin: 10% 0;
+}
+.experiencia .conteudo{
+    display: flex;
+    flex-direction: row; 
+}
+
+.experiencia .lista{
     width: 40%;
 }
 
-.menu_experiencia ul{
-    margin-top: 60px;
-    list-style: none;
-    border-left: 2px solid var(--mode_secundario);
+.experiencia ul{
+    list-style-type: none;
 }
 
-.menu_experiencia ul li{
-    padding-bottom: 30px;
+.experiencia ul li{
+    width: 50%;
+    cursor: pointer;
+    padding: 15px 0;
 }
 
-.menu_experiencia a{
-    padding: 20px;
-    color: #505050;
-}
-
-.menu_experiencia a:hover{
-    border-left: 1px solid #10d7e2;
+.experiencia ul li:hover{
     background-color: var(--mode_secundario);
-    color: var(--mode_text);
-    padding: 10px 80px 10px 20px;
+    border-bottom: 1px solid #00D2DF;
 }
 
-.menu_experiencia a:active{
-    border-left: 1px solid #10d7e2;
+.tab-content{
+    box-sizing: border-box;
+    margin: 0 5%;
+    width: 60%;
+}
+
+[data-tab-content]{
+    display: none;
+}
+
+.active[data-tab-target]{
     background-color: var(--mode_secundario);
-    color: var(--mode_text);
+    border-bottom: 1px solid #00D2DF;
 }
 
-.conteudo_experiencia{
-    display: flex;
-    flex-direction: column;
-}
-
-.descricao{
-    margin: auto;
-    width: 80%;
-    padding-bottom: 50px;
-    border-bottom: 2px solid var(--mode_secundario);
-}
-
-.cargo_data{
-    display: flex;
-    gap: 200px;
-    justify-content: space-between;
-    height: 80px;
-    line-height: 80px;
-}
-
-.descricao_trabalho{
-    display: flex;
-    flex-direction: column;
-}
-
-#amazon{
+.active[data-tab-content]{
     display: block;
 }
 
-#google, #agency{
-    display: none;
-}
 
 
 /* PROJETOS */
 .projetos{
-    background-color: #151515;
+    background-color: var(--mode_secundario);
+    padding: 2% 7.5%;
+}
+
+.projetos .conteudo{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 7.5%;
+    justify-content: space-between;
 }
 
 .conteudo_projeto{
-    width: 50%;
+    width: 45%;
     height: 700px;
 }
 
@@ -321,12 +315,12 @@ h2{
 
 .foto_apresentacao_projeto{
     margin: 5% 0;
+    display: flex;  
+}
+
+.foto_apresentacao_projeto img{
     width: 100%;
-    height: 60%;
-    display: flex;
-    background-image: url("img/projetos/130633362-dcddc894-fbbc-455b-8c78-bbefc8e7822c.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
+    height: 100%;
     border-left: 10px solid #00D2DF;
 }
 
@@ -340,7 +334,7 @@ h2{
 
 .tecnologias_usadas{
     color:#00D2DF;
-    font-weight: 500;
+    font-weight: bold;
 }
 
 .repositorio{
@@ -371,6 +365,19 @@ h2{
 }
 
 
+/* FOOTER */
+footer{
+    background-color: var(--mode_principal);
+    display: flex;
+    flex-direction: row;
+    padding: 1% 7.5%;
+    justify-content: space-between;
+}
+
+footer span{
+    color: #00D2DF;
+    font-weight: bold;
+}
 
 
 
@@ -476,10 +483,41 @@ h2{
     .redes, .download_mail{
         width: 100%;
         justify-content: space-evenly;
+        margin: 5% 0;
     }
 
     .sobre_mim p, .conteudo_experiencia p{
         font-size: 1em;
+    }
+
+    .experiencia .conteudo{
+        flex-direction: column;
+    }
+
+    .experiencia .conteudo .lista{
+        width: 100%;
+    }
+
+    .experiencia .conteudo .lista ul{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .experiencia .conteudo ul li{
+        text-align: center;
+        width: calc(100% / 3);
+        display: inline;
+    }
+
+    .experiencia .conteudo .tab-content{
+        width: 100%;
+        margin: 5% 0;
+    }
+
+    .experiencia .conteudo .tab-content h3{
+        text-align: center;
+        margin-bottom: 5%;
     }
 
 }
@@ -490,7 +528,7 @@ h2{
     }
 }
 
-/* @media (max-width:600px){
+@media (max-width:600px){
 
     main{
         width: 100%;
@@ -513,7 +551,7 @@ h2{
     }
 
     .botoes{
-        padding-top: 20px;
+        margin: 10% 0;
     }
 
     .btn{
@@ -524,4 +562,4 @@ h2{
         width: 50%;
     }
 
-} */
+}

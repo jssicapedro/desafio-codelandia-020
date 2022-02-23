@@ -11,30 +11,32 @@
 }
 
 [class^="icon-"], [class*=" icon-"] {
-  color: #00D2DF;
   font-family: 'icomoon' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
-  font-size: 1.5em;
+  font-size: 2em;
   text-transform: none;
-  /* line-height: 1; */
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-inbox-download:before {
   content: "\e902";
-  font-size: 1.5em;
+  font-weight: 700;
 }
 .icon-mail-envelope-closed:before {
   content: "\e900"; 
-  font-size: 1.5em;
+  font-weight: 700;
 }
 .icon-linkedin:before {
   content: "\e903";
-  font-size: 1.5em;
+  font-weight: 700;
 }
 .icon-figma:before {
   content: "\e901";
@@ -50,5 +52,5 @@
 }
 .icon-github:before {
   content: "\eab0";
-  font-size: 1.5em;
+  font-weight: 700;
 }

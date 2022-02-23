@@ -1,21 +1,16 @@
-function exp() {
-    var amazon = document.querySelector('#amazon');
-    var google = document.querySelector('#google');
-    var agency = document.querySelector('#agency');
+const tabs = document.querySelectorAll('[data-tab-target]')
+const tabContents = document.querySelectorAll('[data-tab-content]')
 
-    var empresas = [amazon, google, agency]
-
-    if( amazon.style.display === "block"){
-        google.style.display = "none";
-        agency.style.display = "none";
-        
-    }   else if (google.style.display === "block"){
-        amazon.style.display = "none";
-        agency.style.display = "none";
-
-    }   else{
-        agency.style.display = "block";
-        amazon.style.display = "none";
-        google.style.display = "none";
-    }
-}
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const target = document.querySelector(tab.dataset.tabTarget)
+    tabContents.forEach(tabContent => {
+      tabContent.classList.remove('active')
+    })
+    tabs.forEach(tab => {
+      tab.classList.remove('active')
+    })
+    tab.classList.add('active')
+    target.classList.add('active')
+  })
+})
