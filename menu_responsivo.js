@@ -7,8 +7,10 @@ menuToggle.addEventListener('click', () => {
   menu.classList.toggle('active');
 });
 
-const item = document.querySelector('.menu li');
+const items = document.querySelectorAll('.menu li');
 
-item.addEventListener('click', () => {
-  menu.classList.remove('active');
-})
+items.forEach(item => {
+  item.addEventListener('click', () => {
+    menu.classList.remove('active');
+  })
+});
