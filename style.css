@@ -19,14 +19,12 @@
 *{
     margin: 0;
     padding: 0;
-    /* border: 1px solid red; */
 }
 
 .linha{
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, rgba(209,56,235,0) 0%, var(--mode_text) 50%, rgba(0,212,255,0) 100%);
-} 
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(black), to(black), color-stop(50%, #ffffff2d));
+    height: 1px;
+}
 
 body{
     background-color: var(--mode_principal);
@@ -34,15 +32,15 @@ body{
     font-family: 'Inter', sans-serif;
 }
 
-header{
-    height: 50px;
-    width: 100%;
-    line-height: 50px;
+header nav{
+    height: 8vh;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     padding: 20px 0;
-    background-color: var(--mode_secundario);
+    width: 100%;
+    background-color: var(--mode_principal);
 }
 
 header p{
@@ -50,21 +48,36 @@ header p{
     font-weight: bold;
 }
 
-header ul{
+header .menu{
     font-weight: 200;
     display: flex;
     list-style: none;
     margin-right: 5%;
 }
 
-header ul li{
+header .menu li{
     margin: 0 25px;
 }
 
 header img{
     width: 45px;
+    height: 45px;
     cursor: pointer;
 }
+
+.mobile-menu{
+    display: none; 
+    cursor: pointer;
+}
+
+.mobile-menu div{
+   width: 35px;
+   height: 2px;
+   background-color: var(--mode_text);
+   margin: 8px;
+   border-radius: 30px;
+}
+
 
 a{
     text-decoration: none;
@@ -81,10 +94,15 @@ header ul li a:hover{
 }
 
 h2{
+    padding: 10% 0;
     text-transform: uppercase;
 }
 
 /* MAIN */
+/* main{
+    background-color: #00D2DF;
+    height: 100vh;
+} */
 /* LOADING PAGE */
 .landing_page{
     display: flex;
@@ -201,7 +219,6 @@ h2{
     width: 50%;
     display: flex;
     margin: auto;
-    height: 67vh;
 }
 
 .foto img{
@@ -242,9 +259,6 @@ h2{
     background-color: var(--mode_principal); 
 }
 
-.experiencia h2{
-    margin: 10% 0;
-}
 .experiencia .conteudo{
     display: flex;
     flex-direction: row; 
@@ -287,8 +301,6 @@ h2{
 .active[data-tab-content]{
     display: block;
 }
-
-
 
 /* PROJETOS */
 .projetos{
@@ -416,8 +428,9 @@ footer span{
         display: flex;
         width: 100%;
         justify-content: flex-end;
-        /* align-items: center; */
         position: absolute;
+        margin-top: -2%;
+        z-index: -4;
     }
 
     .imagem_into img{
@@ -434,6 +447,11 @@ footer span{
 
     .foto_apresentacao_projeto{
         width: 100%;
+        height: auto;
+    }
+
+    .foto_apresentacao_projeto img{
+        object-fit: cover;
     }
 
 }
@@ -466,7 +484,6 @@ footer span{
     .sobre{
         padding: 5%;
         margin: auto;
-        height: 95vh;
         width: 90%;
         flex-direction: column;
         gap: 50px;
@@ -523,9 +540,49 @@ footer span{
 }
 
 @media (max-width:900px){
+    body{
+        overflow-x: hidden;
+    }
+
     .foto_apresentacao_projeto{
         height: 50%;
     }
+
+    header img{
+        display: none;
+    }
+
+    nav{
+        margin: 0;
+    }
+
+    header .menu {
+        position: absolute;
+        top: 12.2vh;
+        right: 0;
+        height: 92vh;
+        width: 100vw;
+        margin: 0;
+        background-color: var(--mode_principal);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        display: none;
+    }
+
+    .menu li{
+        margin: 0;
+        opacity: 0;
+    }
+
+    .mobile-menu{
+        display: block;
+    }
+
+    .mobile-menu:checked ~ .menu{
+        display: block;
+    }
+
 }
 
 @media (max-width:600px){
@@ -542,7 +599,7 @@ footer span{
     }
 
     .introducao{
-        height: 50vh;
+        height: 50vh; 
         width: 96vw;
         margin: auto;
         text-align: center;
