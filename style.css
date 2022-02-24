@@ -7,8 +7,8 @@
 }
 
 .light-mode {
-  --mode_principal: #fff;
-  --mode_secundario: #c4c4c4;
+  --mode_principal: #D9D9D9;
+  --mode_secundario: #8C8C8C;
   --mode_text: #000;
 }
 
@@ -107,15 +107,11 @@ header ul li a:hover {
 }
 
 h2 {
-  padding: 10% 0;
+  padding: 25px 0;
   text-transform: uppercase;
 }
 
 /* MAIN */
-/* main{
-    background-color: #00D2DF;
-    height: 100vh;
-} */
 /* LOADING PAGE */
 .landing_page {
   display: flex;
