@@ -54,7 +54,7 @@ header nav {
   align-items: center;
   padding: 20px 0;
   width: 100%;
-  background-color: var(--mode_principal);
+  background-color: var(--mode_secundario);
 }
 
 header p {
