@@ -461,6 +461,10 @@ footer {
 }
 
 @media (max-width: 1050px) {
+  header nav img{
+    display: block;
+  }
+
   .landing_page {
     height: 50vh;
   }
