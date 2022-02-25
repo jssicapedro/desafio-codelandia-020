@@ -47,7 +47,7 @@ body {
 }
 
 header nav {
-  height: 6vh;
+  height: 8vh;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
