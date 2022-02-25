@@ -393,15 +393,8 @@ h2 {
 /* FOOTER */
 footer {
   background-color: var(--mode_navbar);
-  display: flex;
-  flex-direction: row;
-  padding: 1% 7.5%;
-  justify-content: space-between;
-}
-
-footer span {
-  color: #00d2df;
-  font-weight: bold;
+  padding:  1% 0%;
+  text-align: center;
 }
 
 @media (max-width: 1500px) {
