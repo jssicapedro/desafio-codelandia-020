@@ -54,7 +54,6 @@ header nav {
   align-items: center;
   width: 100%;
   background-color: var(--mode_navbar);
-  position: fixed;
   z-index: 4;
 }
 
@@ -576,7 +575,7 @@ footer {
     height: 90vh;
     width: 100vw;
     margin: 0;
-    background-color: var(--mode_principal);
+    background-color: var(--mode_navbar);
     display: none;
     z-index: 20;
   }
