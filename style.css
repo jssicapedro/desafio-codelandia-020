@@ -3,12 +3,14 @@
 :root {
   --mode_principal: #121212;
   --mode_secundario: #151515;
+  --mode_navbar: #222222;
   --mode_text: #fff;
 }
 
 .light-mode {
-  --mode_principal: #D9D9D9;
-  --mode_secundario: #8C8C8C;
+  --mode_principal: #F2F3F5;
+  --mode_secundario: #E4E5E9;
+  --mode_navbar: #dbdddc;
   --mode_text: #000;
 }
 
@@ -29,15 +31,13 @@
 }
 
 .linha {
-  background: -webkit-gradient(
-    linear,
-    0 0,
-    100% 0,
-    from(black),
-    to(black),
-    color-stop(50%, #ffffff2d)
-  );
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(black), to(black), color-stop(50%, #ffffff2d));
   height: 1px;
+}
+
+.destaque{
+  font-weight: 700;
+  margin-top: 5%;
 }
 
 body {
@@ -47,33 +47,35 @@ body {
 }
 
 header nav {
-  height: 8vh;
+  height: 6vh;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  padding: 20px 0;
   width: 100%;
-  background-color: var(--mode_secundario);
+  background-color: var(--mode_navbar);
+  position: fixed;
+  z-index: 1;
 }
 
-header p {
-  font-size: 1.1em;
-  font-weight: bold;
+.logo {
+  width: 50px;
+  height: 50px;
+  display: flex;
 }
 
 header .menu {
-  font-weight: 200;
-  display: flex;
-  list-style: none;
-  margin-right: 5%;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    width: 40%;
 }
 
 header .menu li {
-  margin: 0 25px;
+  font-weight: bold;
 }
 
-header img {
+header nav #mode {
   width: 45px;
   height: 45px;
   cursor: pointer;
@@ -97,17 +99,13 @@ a {
   color: var(--mode_text);
 }
 
-header ul li:hover {
-  transform: scale(1.05);
-  font-weight: 300;
-}
-
 header ul li a:hover {
+  padding-bottom: 15px;
   border-bottom: 2px solid #00d2df;
 }
 
 h2 {
-  padding: 25px 0;
+  /* padding: 25px 0; */
   text-transform: uppercase;
 }
 
@@ -264,8 +262,12 @@ h2 {
 
 /* EXPERIÊNCIA */
 .experiencia {
-  padding: 4% 7.5%;
+  padding: 2% 7.5%;
   background-color: var(--mode_principal);
+}
+
+.experiencia h2{
+  padding-bottom: 2%;
 }
 
 .experiencia .conteudo {
@@ -320,13 +322,15 @@ h2 {
 .projetos .conteudo {
   display: flex;
   flex-direction: row;
+  gap: 10%;
   flex-wrap: wrap;
   justify-content: space-between;
+  
 }
 
 .conteudo_projeto {
-  width: 45%;
-  height: 700px;
+  width: 25%;
+  margin: 2% auto;
 }
 
 .conteudo_projeto:hover {
@@ -388,7 +392,7 @@ h2 {
 
 /* FOOTER */
 footer {
-  background-color: var(--mode_principal);
+  background-color: var(--mode_navbar);
   display: flex;
   flex-direction: row;
   padding: 1% 7.5%;
@@ -450,7 +454,7 @@ footer span {
   }
 
   .conteudo_projeto {
-    width: 100%;
+    width: 30%;
   }
 
   .foto_apresentacao_projeto {

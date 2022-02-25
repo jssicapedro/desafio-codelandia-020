@@ -40,15 +40,19 @@
 }
 .icon-figma:before {
   content: "\e901";
+  color: #00d2df;
 }
 .icon-twitter:before {
   content: "\ea96";
+  color: #00d2df;
 }
 .icon-youtube:before {
   content: "\ea9d";
+  color: #00d2df;
 }
 .icon-twitch:before {
   content: "\ea9f";
+  color: #00d2df;
 }
 .icon-github:before {
   content: "\eab0";
