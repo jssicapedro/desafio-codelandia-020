@@ -569,8 +569,8 @@ footer span {
     display: none;
   }
 
-  nav {
-    margin: 0;
+  header nav {
+    position: absolute;
   }
 
   header .menu {
