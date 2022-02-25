@@ -564,9 +564,9 @@ footer {
     display: none;
   }
 
-  header nav {
+ /*  header nav {
     position: absolute;
-  }
+  } */
 
   header .menu {
     position: absolute;
