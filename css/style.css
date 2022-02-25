@@ -124,7 +124,6 @@ h2 {
 
 .texto {
   height: 93%;
-  padding-bottom: 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
