@@ -55,7 +55,7 @@ header nav {
   width: 100%;
   background-color: var(--mode_navbar);
   position: fixed;
-  z-index: 1;
+  z-index: 4;
 }
 
 .logo {
@@ -105,7 +105,6 @@ header ul li a:hover {
 }
 
 h2 {
-  /* padding: 25px 0; */
   text-transform: uppercase;
 }
 
@@ -231,6 +230,7 @@ h2 {
 .foto img {
   background-color: var(--mode_principal);
   border-left: 5px solid #00d2df;
+  width: 70%;
 }
 
 .sobre_mim {
@@ -509,6 +509,10 @@ footer span {
     justify-content: center;
   }
 
+  .foto img{
+    width: 50%;
+  }
+
   .redes,
   .download_mail {
     width: 100%;
@@ -571,7 +575,7 @@ footer span {
 
   header .menu {
     position: absolute;
-    top: 12vh;
+    top: 6vh;
     right: 0;
     height: 90vh;
     width: 100vw;
@@ -599,17 +603,16 @@ footer span {
   .menu.active {
     display: block;
   }
+
+  .conteudo_projeto{
+    width: 100%;
+  }
 }
 
 @media (max-width: 600px) {
-  main {
-    width: 100%;
-  }
-
   .landing_page {
     width: 96vw;
     flex-direction: column;
-    margin: 20px auto 0;
     align-items: center;
   }
 
