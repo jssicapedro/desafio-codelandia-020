@@ -336,7 +336,7 @@ h2 {
 }
 
 .conteudo_projeto:hover {
-  transform: translateY(-20px);
+  transform: scale(1.2);
   transition: 0.5s;
 }
 
@@ -357,6 +357,7 @@ h2 {
 
 .apresentacao-projeto p {
   margin: 2% 0;
+  font-size: 1em;
 }
 
 .tecnologias_usadas {
@@ -605,6 +606,11 @@ footer {
 
   .conteudo_projeto{
     width: 100%;
+    margin: auto;
+  }
+
+  .conteudo_projeto:hover{
+    transform: scale(1);
   }
 }
 
