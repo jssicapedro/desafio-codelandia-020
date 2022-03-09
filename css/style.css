@@ -415,7 +415,6 @@ footer {
     justify-content: center;
     margin: auto;
     text-align: center;
-    background: linear-gradient(90deg, #d138eb68 0%, #00d4ff68 100%);
     padding: 4%;
     z-index: 1;
   }
@@ -472,10 +471,6 @@ footer {
 
   .landing_page {
     height: 50vh;
-  }
-
-  .introducao {
-    background: none;
   }
 
   .imagem_into img {
