@@ -59,6 +59,8 @@ header nav {
   width: 100%;
   border-bottom: 1px solid var(--mode_navbar);
   z-index: 4;
+  position: fixed;
+  background: var(--mode_principal);
 }
 
 .logo {
