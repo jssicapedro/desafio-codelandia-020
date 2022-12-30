@@ -264,11 +264,59 @@ h2 {
 .redes div {
   cursor: pointer;
 }
+/* SKILL */
+.skills{
+  background-color: var(--mode_principal);
+  padding: 2% 7.5%;
+}
+
+.skills h2{
+  text-align: center;
+  padding: 0 0 40px;
+}
+
+.skills h2.study{
+  padding: 2% 0 40px;
+}
+
+.skills ul{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.skills ul li{
+  width: 120px;
+  height: 120px;
+  background-color: var(--mode_secundario);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--mode_navbar);
+  border-radius: 5px;
+  padding: 5px 0;
+}
+
+.skills ul li p{
+  margin: 10px 0;
+}
+
+.skills ul li img{
+  margin: 5px 0;
+  width: 80px;
+}
+
+
+
 
 /* EXPERIÊNCIA */
 .experiencia {
   padding: 2% 7.5%;
-  background-color: var(--mode_principal);
+  background-color: var(--mode_secundario);
 }
 
 .experiencia h2{
@@ -296,7 +344,7 @@ h2 {
 }
 
 .experiencia ul li:hover {
-  background-color: var(--mode_secundario);
+  background-color: var(--mode_principal);
   border-bottom: 1px solid #00d2df;
 }
 
@@ -311,7 +359,7 @@ h2 {
 }
 
 .active[data-tab-target] {
-  background-color: var(--mode_secundario);
+  background-color: var(--mode_principal);
   border-bottom: 1px solid #00d2df;
 }
 
@@ -321,7 +369,7 @@ h2 {
 
 /* PROJETOS */
 .projetos {
-  background-color: var(--mode_secundario);
+  background-color: var(--mode_principal);
   padding: 2% 7.5%;
 }
 
