@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --mode_principal: #121212;
-  --mode_secundario: #151515;
-  --mode_navbar: #222222;
-  --mode_text: #fff;
-}
-
-.light-mode {
   --mode_principal: #F2F3F5;
   --mode_secundario: #E4E5E9;
   --mode_navbar: #dbdddc;
   --mode_text: #000;
+}
+
+.dark-mode {
+  --mode_principal: #121212;
+  --mode_secundario: #151515;
+  --mode_navbar: #222222;
+  --mode_text: #fff;
 }
 
 .icon-github,
