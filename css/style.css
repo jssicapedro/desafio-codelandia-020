@@ -286,6 +286,7 @@ h2 {
   justify-content: center;
   align-items: center;
   gap: 50px;
+  flex-wrap: wrap;
 }
 
 .skills ul li{
@@ -309,9 +310,6 @@ h2 {
   margin: 5px 0;
   width: 80px;
 }
-
-
-
 
 /* EXPERIÊNCIA */
 .experiencia {
@@ -652,6 +650,7 @@ footer {
 
   .menu.active {
     display: block;
+    height: 100vh;
   }
 
   .conteudo_projeto{
